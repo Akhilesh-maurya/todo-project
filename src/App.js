@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import Login from "./components/Login";
 
-function App() {
+// const columns = [
+//   { id: "product", label: "Product", name: "product" },
+//   { id: "quantity", label: "Quantity", name: "quantity" },
+//   { id: "price", label: "Price", name: "price" },
+//   { id: "discount", label: "Discount", name: "discount" },
+//   { id: "total", label: "Total price", name: "total" },
+// ];
+
+// const rows = [
+//   {
+//     id: "1",
+//     product: "Shirt",
+//     quantity: "2",
+//     price: "3000",
+//     discount: "10%",
+//     total: "2000",
+//   },
+// ];
+
+// const initData = {
+//   subTotal: "subTotal",
+//   invoicePrice: "2000",
+//   total: "Total",
+//   tax: "Tax",
+//   percent: "10%",
+//   invoiceTax: "1000",
+//   totalPrice: "1200",
+// };
+
+function App(props) {
+  // const { data = initData } = props;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Login />
     </div>
   );
 }
