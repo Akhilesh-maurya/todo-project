@@ -1,0 +1,72 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory": ["src", "node_modules"]
+      }
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "no-param-reassign": [2, { "props": false }],
+    "react/jsx-one-expression-per-line": "off",
+    "react/require-default-props": "off",
+    "react/function-component-definition": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [
+      2,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": "warn",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "no-unsafe-optional-chaining": "off",
+    "no-nonoctal-decimal-escape": "off",
+    "react/jsx-wrap-multilines": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "no-restricted-exports": "off",
+    "jsx-a11y/label-has-for": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "default-param-last": "off",
+    "no-debugger": "warn",
+    "no-console": "warn",
+    "no-shadow": "warn",
+    "no-unused-vars": "warn",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never",
+        "js": "never",
+        "jsx": "never",
+        "mjs": "never"
+      }
+    ]
+  }
+}
