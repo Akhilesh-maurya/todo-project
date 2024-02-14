@@ -12,7 +12,13 @@ function Login() {
   };
   return (
     <MainLayout>
-      <LoginPageLayout>
+      <LoginPageLayout
+        title="Login"
+        btnTitle="Login"
+        account="Create an account"
+        remember="Remember me"
+        forgot="Forgot my password"
+      >
         <Stack display="flex" gap={2.5}>
           <TextField
             label="Email"

@@ -8,13 +8,18 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import SendIcon from "@mui/icons-material/Send";
 
 function LoginPageLayout(props) {
   const {
-    title = "Login",
-    subTitle = "Do not have an account?",
+    title,
+    subTitle,
     children,
-    btnTitle = "Login",
+    btnTitle,
+    account,
+    forgot,
+    remember,
+    onClick,
   } = props;
   return (
     <Box
@@ -41,25 +46,27 @@ function LoginPageLayout(props) {
               component={Link}
               style={{ cursor: "pointer" }}
             >
-              Create an account
+              {account}
             </Typography>
           </Box>
         )}
         <Box>{children}</Box>
         <Box display="flex" alignItems="center" justifyContent="space-between">
-          <Box>
-            <Checkbox size="small" />
-            <Typography variant="caption" color="textSecondary">
-              Remember me
-            </Typography>
-          </Box>
+          {remember && (
+            <Box>
+              <Checkbox size="small" />
+              <Typography variant="caption" color="textSecondary">
+                {remember}
+              </Typography>
+            </Box>
+          )}
           <Typography
             variant="caption"
             color="primary"
             component={Link}
             style={{ cursor: "pointer" }}
           >
-            Forgot my password
+            {forgot}
           </Typography>
         </Box>
         <Button
@@ -67,6 +74,7 @@ function LoginPageLayout(props) {
           color="primary"
           fullWidth
           style={{ borderRadius: "50%" }}
+          onClick={onClick}
         >
           {btnTitle}
         </Button>
@@ -87,9 +95,14 @@ function LoginPageLayout(props) {
           variant="caption"
           color="primary"
           component={Link}
-          style={{ cursor: "pointer" }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 5,
+            cursor: "pointer",
+          }}
         >
-          Privacy policy
+          Privacy policy <SendIcon style={{ width: 18, height: 18 }} />
         </Typography>
       </Box>
     </Box>

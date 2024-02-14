@@ -1,4 +1,7 @@
-import Login from "./components/Login";
+import { BrowserRouter } from "react-router-dom";
+import store from "./store/ReduxStore";
+import { Provider } from "react-redux";
+import ProjectRoutes from "./Project";
 
 // const columns = [
 //   { id: "product", label: "Product", name: "product" },
@@ -32,9 +35,11 @@ import Login from "./components/Login";
 function App(props) {
   // const { data = initData } = props;
   return (
-    <div>
-      <Login />
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <ProjectRoutes />
+      </BrowserRouter>
+    </Provider>
   );
 }
 
