@@ -9,6 +9,7 @@ import React, { useState } from "react";
 import {
   handleAddTodo,
   handleRemoveTodo,
+  selectTodo,
   updateTodo,
 } from "../../slice/todoSlice";
 import { useDispatch, useSelector } from "react-redux";
@@ -74,8 +75,7 @@ const useStyles = makeStyles({
 });
 
 function Todo() {
-  const todos = useSelector((state) => state.data.todoData);
-
+  const todos = useSelector(selectTodo);
   const [value, setValue] = useState("");
   const dispatch = useDispatch();
 
